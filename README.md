@@ -53,14 +53,14 @@ The *is_long* condition checks if the document is too long. The idea is that lon
 1. Deploy the project with CloudFormation
 
         aws cloudformation deploy --template-file dist/packaged.yaml\
-          --stack-name DocumentApproval --s3-bucket [BUCKET NAME]\
+          --stack-name DocumentApprovalStack --s3-bucket [BUCKET NAME]\
           --capabilities CAPABILITY_NAMED_IAM
 
 ## Removing the example
 
 Remove the deployment (deleting stack) if the app is not needed anymore, or if something goes wrong during deployment that needs fixing before trying it again.
 
-    aws cloudformation delete-stack --stack-name FilestoreAppStack
+    aws cloudformation delete-stack --stack-name DocumentApprovalStack
 
 ## User Guide
 Soon coming to the [fnAttic website](https://fnattic.com).
