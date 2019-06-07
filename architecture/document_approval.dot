@@ -1,0 +1,55 @@
+digraph G {
+    // This diagram uses the AWS PNG icon set Light_BG style
+    // symlink the folder here as 'icons'
+    rankdir=TD
+    ranksep="1"
+    layout=dot
+    // states
+    initial [
+        label="Initial"
+        fontname="Arial"
+    ]
+    uploaded [
+        label="Uploaded"
+        fontname="Arial"
+    ]
+    processing [
+        label="Processing"
+        fontname="Arial"
+    ]
+    approved [
+        label="Approved"
+        fontname="Arial"
+    ]
+    rejected [
+        label="Rejected"
+        fontname="Arial"
+    ]
+    // conditions
+    is_long [
+        shape="diamond"
+        label="Is Long?"
+        fontname="Arial"
+    ]
+    // transitions
+    initial -> uploaded [
+        label="upload"
+    ]
+    uploaded -> is_long [
+        label="approve"
+    ]
+    is_long -> processing [
+        style="dashed"
+        label="Yes"
+    ]
+    is_long -> approved [
+        style="dashed"
+        label="No"
+    ]
+    processing -> approved [
+        label="processed"
+    ]
+    uploaded -> rejected [
+        label="reject"
+    ]
+}

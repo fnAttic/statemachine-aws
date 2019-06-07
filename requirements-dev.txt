@@ -1,0 +1,4 @@
+# Development requirements, not for Lambda runtime
+# pip install -r requirements-dev.txt
+awacs==0.9.0
+troposphere==2.4.6
