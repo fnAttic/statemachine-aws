@@ -1,3 +1,4 @@
+# Moved to https://github.com/designfultech/statemachine-aws
 
 # State Machine \[Serverless App Template\]
 
